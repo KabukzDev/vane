@@ -1,6 +1,0 @@
-<html>
-<body>
-<h1>welcome to my <stong>website</strong></h1>
-<p>paragraph</p>
-</body>
-</html>
