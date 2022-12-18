@@ -1,2 +1,2 @@
-# vane.github.io
-my personal website (for practicing HTML, CSS and Javascript)
+# <a href="https://kabukzdev.github.io/vane/">Vane - My Personal Website</a>
+This is my personal website, to test codes using CSS, Javascript and HTML.
