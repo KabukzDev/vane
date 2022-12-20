@@ -1,6 +1,14 @@
 <html>
  <body>
   <style>
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   }
+   .grid-item {
+    width: 80%;
+    margin: 2px;
+   }
    body {
     background-color: black;
     color: white;
@@ -23,24 +31,18 @@
   </style>
   <embed name="cats!" src="/vane/cats.mp3" loop="true" hidden="true" autostart="true">
   <h1>cats!</h1>
-  <form>
-   <fieldset>
-    <img src="/vane/cat1.jpg" alt="cats!" height="200" width="400">
-    <img src="/vane/cat3.jpg" alt="cats!" height="200" width="400">
-    <br>
-    <img src="/vane/cat2.jpg" alt="cats!" height="200" width="400">
-    <img src="/vane/cat4.jpg" alt="cats!" height="200" width="400">
-    <br>
-    <img src="/vane/cat5.jpg" alt="cats!" height="200" width="400">
-    <img src="/vane/cat7.jpg" alt="cats!" height="200" width="400">
-    <br>
-    <img src="/vane/cat6.jpg" alt="cats!" height="200" width="400">
-    <img src="/vane/cat8.jpg" alt="cats!" height="200" width="400">
-    <br>
-    <img src="/vane/cat9.jpg" alt="cats!" height="200" width="400">
-    <img src="/vane/cat10.jpg" alt="cats!" height="200" width="400">
-  </fieldset>
- </form>
+   <div class="grid-container">
+    <img class="grid-item" src="/vane/images/cat1.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat2.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat3.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat4.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat5.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat6.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat7.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat8.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat9.jpg" alt="cats!" height="200" width="400">
+    <img class="grid-item" src="/vane/images/cat10.jpg" alt="cats!" height="200" width="400">
+  </div>
   <button><a href="/vane/index.html"</a>home</button>
  </body>
 </html>
