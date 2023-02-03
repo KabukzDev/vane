@@ -1,6 +1,56 @@
 <html>
+  <head> 
+    <style> 
+      canvas { 
+        border: 1px solid black; 
+      } 
+    </style> 
+  </head> 
   <body>
     <title>TEST 030223-1650</title>
     <h1><strong>THIS PAGE IS PRIVATE, PLEASE CLOSE THE TAB AND GO BACK TO HOMEPAGE</strong></h1>
+    <h4>Test for 03/02/23 at 16:50 - MADE FOR EDUCATIONAL USE WITH CHATGPT</h4>
+    <canvas id="gameCanvas" width="500" height="500"></canvas> 
+    <script>
+      const canvas = document.getElementById('gameCanvas'); 
+const ctx = canvas.getContext('2d'); 
+
+let x = 50; 
+let y = 50; 
+let speed = 3; 
+
+document.addEventListener('keydown', keyDownHandler, false); 
+document.addEventListener('keyup', keyUpHandler, false); 
+
+function keyDownHandler(e) { 
+  if(e.key == 'Right' || e.key == 'ArrowRight') { 
+    x += speed; 
+  } 
+  else if(e.key == 'Left' || e.key == 'ArrowLeft') { 
+    x -= speed; 
+  } 
+  else if(e.key == 'Up' || e.key == 'ArrowUp') { 
+    y -= speed; 
+  } 
+  else if(e.key == 'Down' || e.key == 'ArrowDown') { 
+    y += speed; 
+  } 
+} 
+
+function keyUpHandler(e) { 
+  // do nothing 
+} 
+
+function draw() { 
+  ctx.clearRect(0, 0, canvas.width, canvas.height); 
+  ctx.beginPath(); 
+  ctx.rect(x, y, 50, 50); 
+  ctx.fillStyle = 'red'; 
+  ctx.fill(); 
+  ctx.closePath(); 
+} 
+
+setInterval(draw, 10); 
+</script> 
   </body>
 </html>
