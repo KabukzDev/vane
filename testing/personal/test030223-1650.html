@@ -12,12 +12,16 @@
     <h4>Test for 03/02/23 at 16:50 - MADE FOR EDUCATIONAL USE WITH CHATGPT</h4>
     <canvas id="gameCanvas" width="500" height="500"></canvas> 
     <script>
-      const canvas = document.getElementById('gameCanvas'); 
+const canvas = document.getElementById('gameCanvas'); 
 const ctx = canvas.getContext('2d'); 
 
 let x = 50; 
 let y = 50; 
 let speed = 10; 
+
+// add a win condition 
+let endX = 450; 
+let endY = 450; 
 
 document.addEventListener('keydown', keyDownHandler, false); 
 document.addEventListener('keyup', keyUpHandler, false); 
@@ -48,9 +52,21 @@ function draw() {
   ctx.fillStyle = 'black'; 
   ctx.fill(); 
   ctx.closePath(); 
+
+  // draw the end point 
+  ctx.beginPath(); 
+  ctx.rect(endX, endY, 50, 50); 
+  ctx.fillStyle = 'green'; 
+  ctx.fill(); 
+  ctx.closePath(); 
+
+  // check if the player has reached the end point 
+  if(x >= endX && x <= endX + 50 && y >= endY && y <= endY + 50) { 
+    alert('You win!'); 
+  } 
 } 
 
 setInterval(draw, 10); 
-</script> 
+    </script> 
   </body>
 </html>
