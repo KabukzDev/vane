@@ -17,11 +17,21 @@ const ctx = canvas.getContext('2d');
 
 let x = 50; 
 let y = 50; 
-let speed = 10; 
+let speed = 3; 
 
 // add a win condition 
 let endX = 450; 
 let endY = 450; 
+
+// score variables 
+let score = 0; 
+
+// coin positions 
+let coins = [ 
+  [100, 100], 
+  [200, 200], 
+  [300, 300] 
+]; 
 
 document.addEventListener('keydown', keyDownHandler, false); 
 document.addEventListener('keyup', keyUpHandler, false); 
@@ -49,7 +59,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height); 
   ctx.beginPath(); 
   ctx.rect(x, y, 50, 50); 
-  ctx.fillStyle = 'black'; 
+  ctx.fillStyle = 'red'; 
   ctx.fill(); 
   ctx.closePath(); 
 
@@ -60,7 +70,28 @@ function draw() {
   ctx.fill(); 
   ctx.closePath(); 
 
-  // check if the player has reached the end point 
+  // draw the coins 
+  for(let i = 0; i < coins.length; i++) { 
+    ctx.beginPath(); 
+    ctx.arc(coins[i][0], coins[i][1], 20, 0, Math.PI * 2); 
+    ctx.fillStyle = 'yellow'; 
+    ctx.fill(); 
+    ctx.closePath(); 
+
+    // check if player has collected a coin 
+    if(x >= coins[i][0] - 25 && x <= coins[i][0] + 25 && 
+       y >= coins[i][1] - 25 && y <= coins[i][1] + 25) { 
+      score += 10; 
+      coins.splice(i, 1); 
+    } 
+  } 
+
+  // display score 
+  ctx.font = '16px Arial'; 
+  ctx.fillStyle = 'black'; 
+  ctx.fillText('Score: ' + score, 8, 20); 
+
+  // check if the player has reached the end point
   if(x >= endX && x <= endX + 50 && y >= endY && y <= endY + 50) { 
     alert('You win!'); 
   } 
