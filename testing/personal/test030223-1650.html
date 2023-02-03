@@ -11,6 +11,7 @@
     <h1><strong>THIS PAGE IS PRIVATE, PLEASE CLOSE THE TAB AND GO BACK TO HOMEPAGE</strong></h1>
     <h4>Test for 03/02/23 at 16:50 - MADE FOR EDUCATIONAL USE</h4>
     <canvas id="gameCanvas" width="500" height="500"></canvas> 
+    <h6>After you win, restart the website.</h6>
     <script>
 const canvas = document.getElementById('gameCanvas'); 
 const ctx = canvas.getContext('2d'); 
@@ -94,6 +95,7 @@ function draw() {
   // check if the player has reached the end point
   if(x >= endX && x <= endX + 50 && y >= endY && y <= endY + 50) { 
     alert('You win!'); 
+    window.location.reload(false);
   } 
 } 
 
