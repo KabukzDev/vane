@@ -1,0 +1,36 @@
+<html>
+  <head> 
+    <style>
+      #gameContainer { 
+  width: 500px; 
+  height: 500px; 
+  background-color: lightgray; 
+  position: relative; 
+} 
+
+#block { 
+  width: 100px; 
+  height: 100px; 
+  background-color: red; 
+  position: absolute; 
+} 
+    </style> 
+  </head> 
+  <body>
+    <title>TEST 030223-1650</title>
+    <h1><strong>THIS PAGE IS PRIVATE, PLEASE CLOSE THE TAB AND GO BACK TO HOMEPAGE</strong></h1>
+    <h4>Test for 03/02/23 at 17:10 - MADE FOR EDUCATIONAL USE WITH CHATGPT</h4>
+    <div id="gameContainer"> 
+    <div id="block"></div> 
+    </div>
+    <script>
+      const gameContainer = document.getElementById('gameContainer'); 
+const block = document.getElementById('block'); 
+
+gameContainer.addEventListener('mousemove', function(event) { 
+  block.style.left = event.clientX - 50 + 'px'; 
+  block.style.top = event.clientY - 50 + 'px'; 
+});
+    </script> 
+  </body>
+</html>
