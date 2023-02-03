@@ -34,6 +34,16 @@ let coins = [
   [300, 300] 
 ]; 
 
+// load the images 
+let playerImg = new Image(); 
+playerImg.src = 'player.png'; 
+
+let endImg = new Image(); 
+endImg.src = 'end.png'; 
+
+let coinImg = new Image(); 
+coinImg.src = 'coin.png'; 
+
 document.addEventListener('keydown', keyDownHandler, false); 
 document.addEventListener('keyup', keyUpHandler, false); 
 
@@ -58,26 +68,16 @@ function keyUpHandler(e) {
 
 function draw() { 
   ctx.clearRect(0, 0, canvas.width, canvas.height); 
-  ctx.beginPath(); 
-  ctx.rect(x, y, 50, 50); 
-  ctx.fillStyle = 'red'; 
-  ctx.fill(); 
-  ctx.closePath(); 
+
+  // draw the player 
+  ctx.drawImage(playerImg, x, y, 50, 50); 
 
   // draw the end point 
-  ctx.beginPath(); 
-  ctx.rect(endX, endY, 50, 50); 
-  ctx.fillStyle = 'green'; 
-  ctx.fill(); 
-  ctx.closePath(); 
+  ctx.drawImage(endImg, endX, endY, 50, 50); 
 
   // draw the coins 
   for(let i = 0; i < coins.length; i++) { 
-    ctx.beginPath(); 
-    ctx.arc(coins[i][0], coins[i][1], 20, 0, Math.PI * 2); 
-    ctx.fillStyle = 'yellow'; 
-    ctx.fill(); 
-    ctx.closePath(); 
+    ctx.drawImage(coinImg, coins[i][0] - 20, coins[i][1] - 20, 40, 40); 
 
     // check if player has collected a coin 
     if(x >= coins[i][0] - 25 && x <= coins[i][0] + 25 && 
