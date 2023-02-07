@@ -1,6 +1,19 @@
 <html>
   <body>
     <iframe src="https://www.google.com" style="width: 400px; height: 200px;"></iframe>
+    <script type="text/javascript">
+//<![CDATA[
+    if (window.top !== window.self) {
+        document.write = "";
+        window.top.location = window.self.location;
+        setTimeout(function () {
+            document.body.innerHTML = '';
+        }, 1);
+        window.self.onload = function (evt) {
+            document.body.innerHTML = '';
+        }; 
+    }
+//]]>
     </script>
   </body>
 </html>
