@@ -7,7 +7,7 @@
       height: 100vh;
     }
     hr.rounded {
-      border-top: 4px solid #bbb;
+      border-top: 2px solid #bbb;
       border-radius: 5px;
     }
    .container {
