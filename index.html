@@ -4,77 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Vane Website</title>
   <link rel="icon"  type="image/x-icon" href="/vane/myface.jpeg">
+  <link rel="stylesheet" type="text/css" href="/vane/main.css" media=”screen” />
  </head>
  <body>
-  <style>
-    body {
-      background-color: #262626;
-      color: #f6f5f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-   .container {
-      display: flex;
-   }
-    h1 {
-      font-family: "Arial Rounded MT Bold";
-    }
-    p {
-      font-family: "Trebuchet MS";
-    }
-    button {
-     display: inline-block;
-     margin: 0 5px;
-     padding: 10px 20px;
-     border: none;
-     font-family: "Arial Rounded MT Bold";
-     border-radius: 100px;
-     padding: 10px 20px;
-     background: white;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-     font-size: 20px;
-     text-transform: lowercase;
-     cursor: pointer;
-     transition: transform 0.3s ease;
-    }
-    button:hover {
-     transform: translateY(-2px); /* Moves the button up slightly on hover */
-    }
-   .card {
-     display: flex;
-     flex-direction: column;
-     border: 1px solid #ddd;
-     border-radius: 10px;
-     overflow: hidden;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    .card img {
-     width: 100%;
-     height: 300px;
-     width: 300px;
-     border-radius: 20px;
-    }
-   .card-content {
-    padding: 20px;
-    text-align: center;
-    background-color: #505050;
-    color: white;
-    }
-   .card-content h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 600;
-    font-family: "Arial Rounded MT Bold";
-   }
-   .card-content p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: "Trebuchet MS";
-   }
-  </style>
   <div class="container">
    <div class="content" align="center">
    <div class="card">
@@ -85,9 +17,11 @@
    <img src="/vane/myface.jpeg" alt="my face when">
    <br>
    <br>
+   <div class="button-container">
    <a href="/vane/aboutme.html"><button>about me</button></a>
    <a href="/vane/cats.html"><button>cats!</button></a>
    <a href="/vane/testing/myexplainer.html"><button>myexplainer</button></a>
+   </div>
    </div>
    </div>
    </div> 
