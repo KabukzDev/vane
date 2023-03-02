@@ -16,11 +16,26 @@
         display: flex;
       }
       .button-container {
-        text-align: center; /* Centers the buttons horizontally */
+        text-align: center;
       }
       .button-container button {
-        display: inline-block; /* Displays the buttons on the same line */
-        margin: 0 10px; /* Adds a small amount of spacing between the buttons */
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 100px; /* Adds rounded corners */
+        background: #f6f5f6; /* Adds a gradient background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        color: #333;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: monospace;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Adds a hover effect */ 
+      }
+      .button-container button:hover {
+      transform: translateY(-2px); /* Moves the button up slightly on hover */
       }
       h1 {
         color: white;
