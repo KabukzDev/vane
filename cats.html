@@ -1,38 +1,17 @@
 <html>
  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css" />
   <title>cats!</title>
   <link rel="icon"  type="image/x-icon" href="/vane/myface.jpeg">
+  <embed name="cats!" src="/vane/cats.mp3" loop="true" hidden="true" autostart="true">
  </head>
  <body>
-  <style>
-   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows:repeat(5, 1fr);
-    gap: 5px 5px;
-    justify-items: center;
-   }
-   body {
-    background-color: black;
-    color: white;
-    text-align: center;
-   }
-   h1 {
-    border: solid 5px;
-    border-color: black;
-    font-family: "Arial Rounded MT Bold";
-   }
-   button {
-    font-family: "Arial Rounded MT Bold";
-    border-radius: 50px;
-    border: 1px solid black;
-    padding: 10px 20px;
-    background: white;
-    font-size: 20px;
-    cursor: pointer;
-   }
-  </style>
-  <embed name="cats!" src="/vane/cats.mp3" loop="true" hidden="true" autostart="true">
+  <div class="container">
+  <div class="content" align="center">
+  <div class="card">
+  <div class="card-content">
   <h1>cats!</h1>
    <div class="grid-container">
     <img class="grid-item" src="/vane/images/cat1.jpg" alt="cats!" height="200" width="400">
@@ -46,7 +25,13 @@
     <img class="grid-item" src="/vane/images/cat9.jpg" alt="cats!" height="200" width="400">
     <img class="grid-item" src="/vane/images/cat10.jpg" alt="cats!" height="200" width="400">
   </div>
-  <br>
-  <button><a href="/vane"</a>home</button>
+  <hr class="rounded">
+  <div class="button-container">
+  <a href="/vane"><button>home</button></a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
  </body>
 </html>
