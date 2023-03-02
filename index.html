@@ -10,6 +10,9 @@
       color: white;
       text-align: center;
     }
+   .container {
+      display: flex;
+   }
     h1 {
       border: solid 5px;
       border-color: black;
@@ -19,21 +22,30 @@
       font-family: "Trebuchet MS";
     }
     button {
+     display: inline-block;
+     margin: 0 5px;
+     padding: 10px 20px;
+     border: none;
      font-family: "Arial Rounded MT Bold";
-     border-radius: 50px;
-     border: 1px solid black;
+     border-radius: 100px;
      padding: 10px 20px;
      background: white;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
      font-size: 20px;
      cursor: pointer;
     }
   </style>
+  <div class="container">
+   <div class="content" align="center">
    <h1>welcome to my <stong>website</strong></h1>
    <br>
    <img src="/vane/myface.jpeg" alt="my face">
    <br>
    <p>meow meow meow meow meow meow meow meow meow meow meow meow</p>
-   <button><a href="/vane/aboutme.html">about me</a></button>
-   <button><a href="/vane/cats.html">cats!</a></button>
+   <a href="/vane/aboutme.html"><button>about me</button></a>
+   <a href="/vane/cats.html"><button>cats!</button></a>
+   <a href="/vane/testing/myexplainer.html"><button>myexplainer</button></a>
+   </div>
+  </div> 
  </body>
 </html>
