@@ -2,6 +2,37 @@ body {
   background-color: #262626;
 }
 
+.button-container {
+  text-align: center;
+}
+.button-container button {
+        display: inline-block;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 100px; /* Adds rounded corners */
+        background: #f6f5f6; /* Adds a gradient background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+        color: #333;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: monospace;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Adds a hover effect */ 
+      }
+      .button-container button:hover {
+      transform: translateY(-2px); /* Moves the button up slightly on hover */
+      }
+      h1 {
+        color: white;
+        font-family: sans-serif;
+      }
+      p {
+        color: white;
+        font-family: sans-serif;
+      }
+
 .container {
   background-color: #272727;
   border-radius: 10px;
