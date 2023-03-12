@@ -1,0 +1,57 @@
+// here will be the CSS for the myExplainer
+
+.container {
+  background-color: #272727;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  flex-grow: 1;
+  color: #fff;
+}
+
+.title h2 {
+  margin-top: 0;
+}
+
+.code-viewer {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  flex-basis: 50%;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+/* Code Syntax Highlighting */
+pre {
+  margin: 0;
+}
+code {
+  color: #fff;
+  display: block;
+}
+code[class*="language-"] {
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  tab-size: 4;
+}
+pre[class*="language-"] {
+  margin: 0;
+  padding: 1em;
+  overflow: auto;
+}
+.language-html {
+  color: #ff9900;
+}
+.language-css {
+  color: #00bfff;
+}
+.language-javascript {
+  color: #ffdc00;
+}
