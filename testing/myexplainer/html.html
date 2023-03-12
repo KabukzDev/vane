@@ -103,5 +103,147 @@
      </div>
     </div>
     <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Links</h2>
+        <p>To start creating a link, we add the text between the "a" and the "/a" tags. This won't highlight the text yet. "a" stands for Anchor tag.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;a&gt;Learn to Code&lt;/a&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>To link the text to a website, we add "href=""" along with a Uniform Resource Locator (URL). "href" is short for "hypertext reference"</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;a href="https://getmimo.com"&gt;Learn to Code&lt;/a&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="code-viewer">
+        <div class="title">
+        <h2>Attributes</h2>
+        <p>"href" is an attribute. All attributes have two things in common: they provide extra information and they go inside the opening tag. Attributes are added after name of the tag, and before ">" closing sign.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;a href="https://getmimo.com"&gt;Learn to Code&lt;/a&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Images</h2>
+        <p>To add images to a webpage, we start with the "img" tag.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h3&gt;Drawing of &lt;em&gt;Earthrise&lt;/em&gt;&lt;/h3&gt;
+       &lt;img&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>Just like "br", "img" is an empty tag. That means it has no closing tag.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h3&gt;Drawing of &lt;em&gt;Earthrise&lt;/em&gt;&lt;/h3&gt;
+       &lt;img&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>To display an image, an image tag needs the "src" attribute. "src" stands for source.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h3&gt;Drawing of &lt;em&gt;Earthrise&lt;/em&gt;&lt;/h3&gt;
+       &lt;img src="https://mimo.app/i/earth.png"&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Style tags</h2>
+        <p>There's an easier way to add the same style to one type of element. We sart by adding "style" tags inside the "head" tags.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;head&gt;
+       &lt;style&gt;
+       &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;h3&gt;List of Pharaohs&lt;/h3&gt;
+       &lt;p&gt;Tutankhamun&lt;/p&gt;
+       &lt;p&gt;Cleopatra VII&lt;/p&gt;
+       &lt;p&gt;Ramses II&lt;/p&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>Inside the "style" tags, we specify which element to style with a tag slector. Select the "p" tag.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;head&gt;
+       &lt;style&gt;
+        p
+       &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;h3&gt;List of Pharaohs&lt;/h3&gt;
+       &lt;p&gt;Tutankhamun&lt;/p&gt;
+       &lt;p&gt;Cleopatra VII&lt;/p&gt;
+       &lt;p&gt;Ramses II&lt;/p&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>When we add "p {" followed by "font-family: Papyrus;", and then "}", we create a CSS rule.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;head&gt;
+       &lt;style&gt;
+        p {
+         font-family: Papyrus;
+        }
+       &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;h3&gt;List of Pharaohs&lt;/h3&gt;
+       &lt;p&gt;Tutankhamun&lt;/p&gt;
+       &lt;p&gt;Cleopatra VII&lt;/p&gt;
+       &lt;p&gt;Ramses II&lt;/p&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
   </body>
 </html>
