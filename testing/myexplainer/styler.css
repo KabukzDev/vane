@@ -1,5 +1,12 @@
 //here will be the CSS for the myExplainer
 
+body {
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .container {
   background-color: #272727;
   border-radius: 10px;
