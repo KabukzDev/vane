@@ -295,5 +295,133 @@
      </div>
     </div>
     <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Ordered lists</h2>
+        <p>An ordered list is made out of "ol" and "/ol" tags. The letter O stands for "ordered" and the letter L stands for "list".</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;ol&gt;
+       &lt;/ol&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>To add a list item, we add text between the "li" and "/li" tags. In this case, the L stands for "list" and the I stands for "item"</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;ol&gt;
+        &lt;li&gt;Tortoise&lt;/li&gt;
+       &lt;/ol&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Unordered lists</h2>
+        <p>To create an unordered list, we use the "ul" tag. The U stands for "unordered" and the L stands for "list".</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;ul&gt;
+       &lt;/ul&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>To add a list item, we add text between the "li" and "/li" tags. Just like the list items of an ordered list.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;ul&gt;
+        &lt;li&gt;Home&lt;/li&gt;
+        &lt;li&gt;About&lt;/li&gt;
+        &lt;li&gt;Contact&lt;/li&gt;
+       &lt;/ul&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="code-viewer">
+        <div class="title">
+        <h2>Linking local webpages</h2>
+        <p>We can access local webpages like "trail.html" by adding "/" before the file name, just like with local images.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      // file: index.html
+      &lt;body&gt;
+        &lt;h5&gt;History of the american Pioneers&lt;/h5&gt;;
+        &lt;a href="/trail.html"&gt;Follow the &lt;strong&gt;trail&lt;/strong&gt; by clicking here!&lt;/a&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+      <pre>
+      <code class="language-html">
+      // file: trail.html
+      &lt;body&gt;
+        &lt;a href="/index.html"&gt;Back&lt;/a&gt;
+        &lt;h3&gt;Oregon Trail&lt;/h3&gt;;
+        &lt;p&gt;The Oregon Trail is a 2,170-mile historic East-West, large-wheeled wagon route and emigrant trail in the United States that connected the Missouri River to valleys in Oregon.&lt;/p&gt;;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="code-viewer">
+        <div class="title">
+        <h2>Including JavaScript</h2>
+        <p>To add JavaScript code to a webpage, we start with the "script" and "/script" tags.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;script&gt;&lt;/script&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>The "script" element is the last element before the closing "/body" tag in the HTML structure.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h3&gt;Tweeter&lt;/h3&gt;
+       &lt;script&gt;&lt;/script&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>In the HTML file, JavaScript like "const username = "Lee";" only works if placed inside the "script" element</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h3&gt;Tweeter&lt;/h3&gt;
+       &lt;script&gt;
+        const username = "Lee";
+       &lt;/script&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
   </body>
 </html>
