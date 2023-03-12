@@ -1,4 +1,55 @@
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styler.css" />
+    <link rel="stylesheet" href="prism.css" />
+    <link rel="icon" type="image/x-icon" href="/vane/images/terminal.png" />
+    <script src="prism.js"></script>
+    <title>HTML | MyExplainer</title>
+  </head>
   <body>
+    <div class="container">
+      <div class="code-viewer">
+        <div class="title">
+        <h2>Style attribute</h2>
+        <p>To add style to an HTML element, start with the "style" attribute.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h1 style&gt;Flowers by Ana&lt;/h1&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+        <div class="title">
+        <p>Since "style" is an attribute, we'll need the "=" sign and quotes "" to give it a value.</p>
+      </div>
+      <pre>
+      <code class="language-html">
+      &lt;body&gt;
+       &lt;h1 style=""&gt;Flowers by Ana&lt;/h1&gt;
+      &lt;/body&gt;
+      </code>
+      </pre>
+     </div>
+    </div>
+    <br>
+  <div id="bottom-bar">
+   <div class="button-container">
+    <a href="/vane/testing/myexplainer"><button>Back</button></a>
+   </div>
+    <br>
+  <div id="google_translate_element"></div>
+  </div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </body>
 </html>
