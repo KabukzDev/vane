@@ -1,11 +1,226 @@
 <html>
   <head>
     <title>Vane's Calculator</title>
+    <style>
+body {
+	background-color: #222;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.calculator {
+	background-color: #000;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+	background-color: #222;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+.display p {
+	font-size: 30px;
+	margin: 0;
+}
+
+.keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+}
+
+button {
+	background-color: #444;
+	color: #fff;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	background-color: #555;
+}
+
+.ac {
+	background-color: #d32f2f;
+}
+
+.del {
+	background-color: #fbc02d;
+}
+
+.operator {
+	background-color: #4caf50;
+}
+
+.number {
+	background-color: #444;
+}
+
+.equals {
+	background-color: #2196f3;
+}
+
+/* Animation Styles */
+.key-enter {
+	transform: scale(0.9);
+}
+
+.key-leave {
+	transform: scale(1.1);
+	opacity: 0;
+}
+    </style>
   </head>
   <body>
+	<div class="calculator">
+		<div class="display">
+			<p id="result"></p>
+		</div>
+		<div class="keys">
+			<button class="ac" onclick="clearDisplay()">AC</button>
+			<button class="del" onclick="deleteLast()">DEL</button>
+			<button class="operator" onclick="insertChar('/')">/</button>
+			<button class="operator" onclick="insertChar('*')">x</button>
+			<button class="number" onclick="insertChar('7')">7</button>
+			<button class="number" onclick="insertChar('8')">8</button>
+			<button class="number" onclick="insertChar('9')">9</button>
+			<button class="operator" onclick="insertChar('-')">-</button>
+			<button class="number" onclick="insertChar('4')">4</button>
+			<button class="number" onclick="insertChar('5')">5</button>
+			<button class="number" onclick="insertChar('6')">6</button>
+			<button class="operator" onclick="insertChar('+')">+</button>
+			<button class="number" onclick="insertChar('1')">1</button>
+			<button class="number" onclick="insertChar('2')">2</button>
+			<button class="number" onclick="insertChar('3')">3</button>
+			<button class="equals" onclick="calculate()">=</button>
+			<button class="number" onclick="insertChar('0')">0</button>
+			<button class="number" onclick="insertChar('.')">.</button>
+		</div>
+	</div>
     <script>
-      const p = document.createElement("p");
-      paragraph.innerHTML = "test";
+let expression = '';
+const display = document.getElementById('result');
+const keys = document.querySelectorAll('.keys button');
+const maxChars = 33;
+
+// Function to insert a character into the expression
+function insertChar(char) {
+	if (expression.length >= maxChars) {
+		return;
+	}
+	// Don't allow multiple decimal points in a number
+	if (char === '.' && expression.slice(-1) === '.') {
+		return;
+	}
+	// Don't allow operators to be entered consecutively
+	if ('+-*/'.includes(char) && '+-*/'.includes(expression.slice(-1))) {
+		return;
+	}
+	expression += char;
+	display.innerText = expression;
+}
+
+// Function to clear the display
+function clearDisplay() {
+	expression = '';
+	display.innerText = '0';
+}
+
+// Function to delete the last character from the expression
+function deleteLast() {
+	expression = expression.slice(0, -1);
+	display.innerText = expression || '0';
+}
+
+// Function to calculate the result of the expression
+function calculate() {
+	// Don't allow trailing operators in the expression
+	if ('+-*/'.includes(expression.slice(-1))) {
+		return;
+	}
+	try {
+		const result = eval(expression);
+		expression = String(result);
+		display.innerText = expression;
+	} catch {
+		// Display an error message if the expression is invalid
+		display.innerText = 'Error';
+	}
+}
+
+// Add animation classes to the button on click
+function animateButton(event) {
+	const button = event.target;
+	button.classList.add('key-enter');
+	setTimeout(() => {
+		button.classList.remove('key-enter');
+		button.classList.add('key-leave');
+	}, 100);
+	setTimeout(() => {
+		button.classList.remove('key-leave');
+	}, 200);
+}
+
+// Add click event listeners to all the buttons
+keys.forEach((button) => {
+	button.addEventListener('click', (event) => {
+		animateButton(event);
+		switch (button.innerText) {
+			case 'AC':
+				clearDisplay();
+				break;
+			case 'DEL':
+				deleteLast();
+				break;
+			case '=':
+				calculate();
+				break;
+			default:
+				insertChar(button.innerText);
+				break;
+		}
+	});
+});
+
+// Add keydown event listener to the document
+document.addEventListener('keydown', (event) => {
+	const key = event.key;
+	switch (key) {
+		case 'Escape':
+			clearDisplay();
+			break;
+		case 'Backspace':
+			deleteLast();
+			break;
+		case '+':
+		case '-':
+		case '*':
+		case 'x':
+		case '/':
+			insertChar(key === 'x' ? '*' : key);
+			break;
+		case '.':
+			insertChar('.');
+			break;
+		case 'Enter':
+			calculate();
+			break;
+		default:
+			if (!isNaN(key) && expression.length < maxChars) {
+				insertChar(key);
+			}
+			break;
+	}
+});
     </script>
   </body>
 </html>
