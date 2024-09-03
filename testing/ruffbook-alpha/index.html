@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>Ruffbook HD</title>
+      <link rel="icon" href="https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/flashhd.ico?v=1708647539090" type="image/x-icon">
+      <link rel="stylesheet" href="./style.css">
+   </head>
+   <body>
+     <div class="content">
+       <div id="lostConnect">
+        <div id="connectAlert">
+          <p>
+           You've lost connection to the internet! Your progress won't be saved until you recover connection.
+          </p>
+         </div> 
+       </div>
+       <embed id="myEmbed" src="https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/ruffbookUHDintro.swf?v=1708836336804" width="1024" height="600"/>
+      <select id="sourceSelector">
+        <option value="https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/ruffbookUHDintro.swf?v=1708836336804">--- Select a Flash file ---</option>
+      </select>
+    </div>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script src="./index.js"></script>
+    <script>
+     window.RufflePlayer = window.RufflePlayer || {};
+     window.RufflePlayer.config = {
+       autoplay: "on",
+       splashScreen: false,
+       allowScriptAccess: true,
+     };
+     </script>
+   </body>
+</html>

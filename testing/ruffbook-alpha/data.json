@@ -1,0 +1,40 @@
+[
+    { "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/thegame.swf?v=1707999649849",
+      "name": ":the game:",
+      "type": "Game",
+      "img": "https://picon.ngfiles.com/467000/flash_467574_card.png?f1601082692"
+    },
+  
+    { "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/papasfrezeria.swf?v=1707961372563",
+      "name": "Papa's Freezeria",
+      "type": "Game",
+      "img": "https://www.coolmathgames.com/sites/default/files/styles/blog_node_image/public/2022-12/How%20to%20Play%20Papa%27s%20Freezeria%20Blog%20Thumbnail.png?itok=Zeuf0mWp" 
+    },
+  
+    { "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/thegame3.swf?v=1708049679341",
+      "name": "REIMAGINE :the game:",
+      "type": "Game",
+      "img": "https://cdn.mobygames.com/5bd16f34-ac11-11ed-96e1-02420a00012d.webp"
+    },
+  
+    {
+      "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/thegame2.swf?v=1708049674604",
+      "name": "REPLAYING :the game:",
+      "type": "Game",
+      "img": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/REPLAYINGthegame.webp?v=1709086578286"
+    },
+    
+    {
+      "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/picos.swf?v=1707999720809",
+      "name": "Pico's School",
+      "type": "Game",
+      "img": "https://static.wikia.nocookie.net/pico/images/7/7b/Flash_310349_card.png"
+    },
+  
+    {
+      "value": "https://cdn.glitch.global/e1f9def6-e94b-43db-a65a-67f216693e31/mcdonalds.swf?v=1707999375212",
+      "name": "McDonald's Game",
+      "type": "Game",
+      "img": "https://games4sustainability.org/wp-content/uploads/2016/04/2.png"
+    }
+]
